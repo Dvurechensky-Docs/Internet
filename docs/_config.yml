@@ -1,6 +1,6 @@
 title: Интернет
 description: Мини-сайт с категориями ссылок на API и ресурсы
-theme: jekyll-theme-slate
+theme: null
 paginate: 5
 collections:
   categories:

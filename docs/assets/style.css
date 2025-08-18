@@ -1,423 +1,57 @@
-/*!
- * Dark themed CSS stylesheet.
- * Copyright (C) 2019 Michael Federczuk
- *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <https://www.gnu.org/licenses/>.
- *
- * ---
- *
- * Version: 2019-11-10 v1.1.0
- * Author: Michael Federczuk <federczuk.michael@protonmail.com>
- */
-.darkpage,
-.darkpage * {
-	background-color: #0f0f0f;
-	color: #7f7f7f;
-	line-height: 1.5;
-	scrollbar-color: #272727 #171717;
+/* Общий фон и текст */
+body {
+	background-color: #0d0d0d;
+	color: #e0e0e0;
+	font-family: 'Roboto', sans-serif;
+	line-height: 1.6;
+	padding: 20px;
 }
-.darkpage ::selection,
-.darkpage::selection {
-	background: #7f7f7f;
-	color: #0f0f0f;
-}
-.darkpage ::-moz-selection,
-.darkpage::-moz-selection {
-	background: #7f7f7f;
-	color: #0f0f0f;
-}
-html.darkpage::-webkit-scrollbar-track {
-	background-color: #171717;
-}
-html.darkpage::-webkit-scrollbar-thumb {
-	background-color: #272727;
-}
-html.darkpage::-webkit-scrollbar-thumb:hover {
-	background-color: #2f2f2f;
-}
-html.darkpage::-webkit-scrollbar-thumb:active {
-	background-color: #333;
-}
-html.darkpage::-webkit-scrollbar-button {
-	background-color: #3f3f3f;
-}
-html.darkpage::-webkit-scrollbar-button:hover {
-	background-color: #474747;
-}
-html.darkpage::-webkit-scrollbar-button:active {
-	background-color: #4b4b4b;
-}
-html.darkpage::-webkit-scrollbar {
-	--x: 0;
-}
-.darkpage h1,
-h1.darkpage {
-	font-size: 2.2em;
-	margin-bottom: 32px;
-	margin-top: 32px;
-}
-.darkpage h2,
-h2.darkpage {
-	font-size: 2em;
-	margin-bottom: 32px;
-	margin-top: 32px;
-}
-.darkpage h3,
-h3.darkpage {
-	font-size: 1.8em;
-	margin-bottom: 32px;
-	margin-top: 32px;
-}
-.darkpage h4,
-h4.darkpage {
-	font-size: 1.6em;
-	margin-bottom: 32px;
-	margin-top: 32px;
-}
-.darkpage h5,
-h5.darkpage {
-	font-size: 1.4em;
-	margin-bottom: 32px;
-	margin-top: 32px;
-}
-.darkpage h6,
-h6.darkpage {
-	font-size: 1.2em;
-	margin-bottom: 32px;
-	margin-top: 32px;
-}
-.darkpage a:link,
-.darkpage a:visited,
-a.darkpage:link,
-a.darkpage:visited {
-	color: #7f7fff;
-	text-decoration: underline;
-}
-.darkpage a:link::selection,
-.darkpage a:visited::selection,
-a.darkpage:link::selection,
-a.darkpage:visited::selection {
-	background: #7f7fff;
-}
-.darkpage a:link::-moz-selection,
-.darkpage a:visited::-moz-selection,
-a.darkpage:link::-moz-selection,
-a.darkpage:visited::-moz-selection {
-	background: #7f7fff;
-}
-.darkpage a:active,
-.darkpage a:hover,
-a.darkpage:active,
-a.darkpage:hover {
-	color: #5f5fff;
+
+/* Ссылки */
+a {
+	color: #61dafb;
 	text-decoration: none;
 }
-.darkpage a:active::selection,
-.darkpage a:hover::selection,
-a.darkpage:active::selection,
-a.darkpage:hover::selection {
-	background: #5f5fff;
+a:hover {
+	color: #ff79c6;
 }
-.darkpage a:active::-moz-selection,
-.darkpage a:hover::-moz-selection,
-a.darkpage:active::-moz-selection,
-a.darkpage:hover::-moz-selection {
-	background: #5f5fff;
+
+/* Заголовки */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: #f8f8f2;
 }
-.darkpage :not(pre) > code,
-.darkpage:not(pre) > code,
-:not(pre) > code.darkpage {
-	padding: 1px;
+
+/* Таблицы */
+table {
+	border-collapse: collapse;
+	width: 100%;
+	color: #e0e0e0;
 }
-.code-bg .darkpage :not(pre) > code,
-.code-bg .darkpage:not(pre) > code,
-.code-bg :not(pre) > code.darkpage,
-.code-bg:not(pre) > code.darkpage,
-.darkpage .code-bg :not(pre) > code,
-.darkpage .code-bg:not(pre) > code,
-.darkpage :not(pre) > code.code-bg,
-.darkpage.code-bg:not(pre) > code,
-.darkpage:not(pre) > code.code-bg,
-:not(pre) > code.darkpage.code-bg {
-	box-shadow: inset 2px 2px 2px #000BF;
-	background-color: #070707;
-	border-color: #1f1f1f;
-	border-radius: 3px;
-	-webkit-border-radius: 3px;
-	-moz-border-radius: 3px;
-	-ms-border-radius: 3px;
-	-o-border-radius: 3px;
-	border-style: solid;
-	border-width: 1px;
-	padding: 3px;
-}
-.code-bg .darkpage :not(pre) > code::selection,
-.code-bg .darkpage:not(pre) > code::selection,
-.code-bg :not(pre) > code.darkpage::selection,
-.code-bg:not(pre) > code.darkpage::selection,
-.darkpage .code-bg :not(pre) > code::selection,
-.darkpage .code-bg:not(pre) > code::selection,
-.darkpage :not(pre) > code.code-bg::selection,
-.darkpage.code-bg:not(pre) > code::selection,
-.darkpage:not(pre) > code.code-bg::selection,
-:not(pre) > code.darkpage.code-bg::selection {
-	background-color: #7f7f7f;
-	color: #070707;
-}
-.code-bg .darkpage :not(pre) > code::-moz-selection,
-.code-bg .darkpage:not(pre) > code::-moz-selection,
-.code-bg :not(pre) > code.darkpage::-moz-selection,
-.code-bg:not(pre) > code.darkpage::-moz-selection,
-.darkpage .code-bg :not(pre) > code::-moz-selection,
-.darkpage .code-bg:not(pre) > code::-moz-selection,
-.darkpage :not(pre) > code.code-bg::-moz-selection,
-.darkpage.code-bg:not(pre) > code::-moz-selection,
-.darkpage:not(pre) > code.code-bg::-moz-selection,
-:not(pre) > code.darkpage.code-bg::-moz-selection {
-	background-color: #7f7f7f;
-	color: #070707;
-}
-.code-margin .darkpage :not(pre) > code,
-.code-margin .darkpage:not(pre) > code,
-.code-margin :not(pre) > code.darkpage,
-.code-margin:not(pre) > code.darkpage,
-.darkpage .code-margin :not(pre) > code,
-.darkpage .code-margin:not(pre) > code,
-.darkpage :not(pre) > code.code-margin,
-.darkpage.code-margin:not(pre) > code,
-.darkpage:not(pre) > code.code-margin,
-:not(pre) > code.darkpage.code-margin {
-	margin-left: 0.5em;
-	margin-right: 0.5em;
-}
-.darkpage pre,
-pre.darkpage {
-	box-shadow: inset 2px 2px 2px #000BF;
-	background-color: #070707;
-	border-color: #1f1f1f;
-	border-radius: 3px;
-	-webkit-border-radius: 3px;
-	-moz-border-radius: 3px;
-	-ms-border-radius: 3px;
-	-o-border-radius: 3px;
-	border-style: solid;
-	border-width: 1px;
-	margin-left: 40px;
-	margin-right: 40px;
-	padding: 1.15em;
-}
-.darkpage pre::selection,
-pre.darkpage::selection {
-	background-color: #7f7f7f;
-	color: #070707;
-}
-.darkpage pre::-moz-selection,
-pre.darkpage::-moz-selection {
-	background-color: #7f7f7f;
-	color: #070707;
-}
-.darkpage pre > code,
-pre.darkpage > code {
-	background-color: transparent;
-}
-.darkpage pre > code::selection,
-pre.darkpage > code::selection {
-	background-color: #7f7f7f;
-	color: #070707;
-}
-.darkpage pre > code::-moz-selection,
-pre.darkpage > code::-moz-selection {
-	background-color: #7f7f7f;
-	color: #070707;
-}
-.darkpage q,
-q.darkpage {
-	font-style: italic;
-}
-.darkpage q::after,
-.darkpage q::before,
-q.darkpage::after,
-q.darkpage::before {
-	content: '"';
-}
-.darkpage blockquote,
-blockquote.darkpage {
-	background-color: #0d0d0d;
-	border-color: #3f3f3f;
-	border-radius: 1em;
-	-webkit-border-radius: 1em;
-	-moz-border-radius: 1em;
-	-ms-border-radius: 1em;
-	-o-border-radius: 1em;
-	border-style: dashed;
-	border-width: 1px;
-	font-style: italic;
+th,
+td {
+	border: 1px solid #444;
 	padding: 8px;
 }
-.darkpage blockquote::selection,
-blockquote.darkpage::selection {
-	background-color: #7f7f7f;
-	color: #0d0d0d;
+th {
+	background-color: #1f1f1f;
 }
-.darkpage blockquote::-moz-selection,
-blockquote.darkpage::-moz-selection {
-	background-color: #7f7f7f;
-	color: #0d0d0d;
+
+/* Код */
+code {
+	background-color: #1e1e1e;
+	color: #f8f8f2;
+	padding: 2px 4px;
+	border-radius: 3px;
 }
-.darkpage hr,
-hr.darkpage {
-	border-style: inset none none;
-	border-width: 2px;
-	border-color: #7f7f7f;
-}
-.darkpage button,
-.darkpage input,
-button.darkpage,
-input.darkpage {
-	font-size: 1em;
-	margin: 2px;
-	padding: 1px;
-}
-.darkpage button,
-.darkpage input[type='button'],
-.darkpage input[type='reset'],
-.darkpage input[type='submit'],
-button.darkpage,
-input[type='button'].darkpage,
-input[type='reset'].darkpage,
-input[type='submit'].darkpage {
-	border-color: #3f3f3f;
-	border-radius: 6px;
-	background-color: #171717;
-	box-shadow: 3px 3px 3px #000BF;
-	padding: 1.25px 12px;
-}
-.darkpage button:hover,
-.darkpage input[type='button']:hover,
-.darkpage input[type='reset']:hover,
-.darkpage input[type='submit']:hover,
-button.darkpage:hover,
-input[type='button'].darkpage:hover,
-input[type='reset'].darkpage:hover,
-input[type='submit'].darkpage:hover {
-	background-color: #131313;
-}
-.darkpage button:active,
-.darkpage input[type='button']:active,
-.darkpage input[type='reset']:active,
-.darkpage input[type='submit']:active,
-button.darkpage:active,
-input[type='button'].darkpage:active,
-input[type='reset'].darkpage:active,
-input[type='submit'].darkpage:active {
-	background-color: #0b0b0b;
-	box-shadow: inset 3px 3px 3px #000BF;
-}
-.darkpage input[type='search'],
-.darkpage input[type='tel'],
-.darkpage input[type='text'],
-.darkpage input[type='time'],
-.darkpage input[type='url'],
-.darkpage input[type='week'],
-.darkpage input[type='date'],
-.darkpage input[type='datetime-local'],
-.darkpage input[type='email'],
-.darkpage input[type='month'],
-.darkpage input[type='number'],
-.darkpage input[type='password'],
-input[type='search'].darkpage,
-input[type='tel'].darkpage,
-input[type='text'].darkpage,
-input[type='time'].darkpage,
-input[type='url'].darkpage,
-input[type='week'].darkpage,
-input[type='date'].darkpage,
-input[type='datetime-local'].darkpage,
-input[type='email'].darkpage,
-input[type='month'].darkpage,
-input[type='number'].darkpage,
-input[type='password'].darkpage {
-	background-color: #0b0b0b;
-	box-shadow: inset 3px 3px 3px #000BF;
-	border-color: #3f3f3f;
-	border-radius: 6px;
-	padding: 1.25px 6px;
-	width: 16em;
-}
-.darkpage input[type='search']:focus,
-.darkpage input[type='search']:hover,
-.darkpage input[type='tel']:focus,
-.darkpage input[type='tel']:hover,
-.darkpage input[type='text']:focus,
-.darkpage input[type='text']:hover,
-.darkpage input[type='time']:focus,
-.darkpage input[type='time']:hover,
-.darkpage input[type='url']:focus,
-.darkpage input[type='url']:hover,
-.darkpage input[type='week']:focus,
-.darkpage input[type='week']:hover,
-.darkpage input[type='date']:focus,
-.darkpage input[type='date']:hover,
-.darkpage input[type='datetime-local']:focus,
-.darkpage input[type='datetime-local']:hover,
-.darkpage input[type='email']:focus,
-.darkpage input[type='email']:hover,
-.darkpage input[type='month']:focus,
-.darkpage input[type='month']:hover,
-.darkpage input[type='number']:focus,
-.darkpage input[type='number']:hover,
-.darkpage input[type='password']:focus,
-.darkpage input[type='password']:hover,
-input[type='search'].darkpage:focus,
-input[type='search'].darkpage:hover,
-input[type='tel'].darkpage:focus,
-input[type='tel'].darkpage:hover,
-input[type='text'].darkpage:focus,
-input[type='text'].darkpage:hover,
-input[type='time'].darkpage:focus,
-input[type='time'].darkpage:hover,
-input[type='url'].darkpage:focus,
-input[type='url'].darkpage:hover,
-input[type='week'].darkpage:focus,
-input[type='week'].darkpage:hover,
-input[type='date'].darkpage:focus,
-input[type='date'].darkpage:hover,
-input[type='datetime-local'].darkpage:focus,
-input[type='datetime-local'].darkpage:hover,
-input[type='email'].darkpage:focus,
-input[type='email'].darkpage:hover,
-input[type='month'].darkpage:focus,
-input[type='month'].darkpage:hover,
-input[type='number'].darkpage:focus,
-input[type='number'].darkpage:hover,
-input[type='password'].darkpage:focus,
-input[type='password'].darkpage:hover {
-	background-color: #070707;
-}
-.darkpage input[type='color'],
-input[type='color'].darkpage {
-	background-color: #0b0b0b;
-	box-shadow: inset 3px 3px 3px #000BF;
-	border-color: #3f3f3f;
-	border-radius: 6px;
-	height: 2.25em;
-	padding: 3px;
-	width: 4.5em;
-}
-.darkpage input[type='color']:focus,
-.darkpage input[type='color']:hover,
-input[type='color'].darkpage:focus,
-input[type='color'].darkpage:hover {
-	background-color: #070707;
+pre {
+	background-color: #1e1e1e;
+	color: #f8f8f2;
+	padding: 10px;
+	border-radius: 5px;
+	overflow-x: auto;
 }

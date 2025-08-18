@@ -1,6 +1,29 @@
 ---
 layout: default
 title: 'Интернет'
+description: 'Список API аниме на 2025 год'
+date: 2025-08-19
+published: true
+tags:
+  - anime
+  - manga
+  - news
+  - art
+  - images
+  - quotes
+  - database
+  - tracking
+  - translation
+  - scene-recognition
+  - platform
+  - community
+  - apiKey
+  - OAuth
+  - public
+  - Naruto
+  - DragonBall
+  - Waifu
+  - GIF
 ---
 
 ### Аниме 🔴

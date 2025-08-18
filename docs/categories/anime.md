@@ -2,6 +2,8 @@
 layout: default
 title: 'Интернет'
 description: 'Список API аниме на 2025 год'
+keywords: 'dvurechensky_pro, dvurechensky, двуреченский, lizerium, unifier, internet, аниме, anime, manga, news'
+author: 'Dvurechensky'
 date: 2025-08-19
 published: true
 tags:

@@ -30,30 +30,60 @@
 <script type="application/ld+json">
 	{
 		"@context": "https://schema.org",
-		"@type": "Person",
-		"name": "Dvurechensky Pro",
-		"alternateName": "Lizerium, Unifier, Rota, Dvurechensky",
-		"url": "https://github.com/Dvurechensky",
-		"image": "https://avatars.githubusercontent.com/u/46356631?v=4",
-		"sameAs": [
-			"https://github.com/dvurechensky",
-			"https://www.linkedin.com/in/dvurechensky-pro/",
-			"https://vk.com/dvurechensky_pro"
-		],
-		"jobTitle": "Software Engineer, Founder of Unifier and Lizerium",
-		"description": "Full-stack .NET & TypeScript developer. Опыт в ASP.NET Core, RabbitMQ, PostgreSQL, Unity, Flutter. Автор проекта Unifier.",
-		"seeks": {
-			"@type": "JobPosting",
-			"title": "Software Engineer",
-			"description": "Ищу позицию Software Engineer / Backend Developer в международной компании.",
-			"employmentType": "FULL_TIME",
-			"industry": "Software Development"
-		},
-		"email": "mailto:dvurechenskysoft@gmail.com",
-		"contactPoint": {
-			"@type": "ContactPoint",
-			"contactType": "Job offers",
-			"email": "dvurechenskysoft@gmail.com"
-		}
+		"@graph": [
+			{
+				"@type": "Person",
+				"name": "Dvurechensky Pro",
+				"alternateName": ["Lizerium", "Unifier", "Rota", "Dvurechensky"],
+				"url": "https://github.com/Dvurechensky",
+				"image": "https://avatars.githubusercontent.com/u/46356631?v=4",
+				"sameAs": [
+					"https://github.com/dvurechensky",
+					"https://www.linkedin.com/in/dvurechensky-pro/",
+					"https://vk.com/dvurechensky_pro"
+				],
+				"jobTitle": "Software Engineer, Founder of Unifier and Lizerium",
+				"description": "Full-stack .NET & TypeScript developer. Опыт в ASP.NET Core, RabbitMQ, PostgreSQL, Unity, Flutter. Автор проекта Unifier.",
+				"email": "mailto:dvurechenskysoft@gmail.com",
+				"seeks": {
+					"@type": "OccupationalRole",
+					"roleName": "Software Engineer / Backend Developer",
+					"occupationalCategory": "https://schema.org/SoftwareEngineer",
+					"employmentType": "FULL_TIME",
+					"industry": "Software Development"
+				},
+				"contactPoint": {
+					"@type": "ContactPoint",
+					"contactType": "Job offers",
+					"email": "dvurechenskysoft@gmail.com"
+				}
+			},
+			{
+				"@type": "JobPosting",
+				"title": "Software Engineer / Backend Developer",
+				"description": "Ищу позицию Software Engineer / Backend Developer в международной компании.",
+				"employmentType": "FULL_TIME",
+				"industry": "Software Development",
+				"hiringOrganization": {
+					"@type": "Organization",
+					"name": "Dvurechensky Pro / Unifier / Lizerium",
+					"sameAs": "https://github.com/Dvurechensky"
+				},
+				"jobLocation": {
+					"@type": "Place",
+					"address": {
+						"@type": "PostalAddress",
+						"addressCountry": "RU"
+					}
+				},
+				"datePosted": "2025-08-19",
+				"validThrough": "2025-12-31T23:59",
+				"contactPoint": {
+					"@type": "ContactPoint",
+					"contactType": "Job offers",
+					"email": "dvurechenskysoft@gmail.com"
+				}
+			}
+		]
 	}
 </script>

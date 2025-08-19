@@ -46,6 +46,7 @@
 		"@graph": [
 			{
 				"@type": "Person",
+				"@id": "{{page.url}}#person",
 				"name": "Dvurechensky Pro",
 				"alternateName": ["Lizerium", "Unifier", "Rota", "Dvurechensky"],
 				"url": "https://github.com/Dvurechensky",
@@ -103,13 +104,15 @@
 						"@type": "EducationalOccupationalCredential",
 						"name": "Безопасность компьютерных и информационных систем / защита информации (2017–2019)",
 						"educationalLevel": "Specialist",
-						"description": "Воронежский Государственный Технический Университет"
+						"description": "Воронежский Государственный Технический Университет",
+						"url": "https://cchgeu.ru/"
 					},
 					{
 						"@type": "EducationalOccupationalCredential",
 						"name": "Двухсредные летательные аппараты",
 						"educationalLevel": "Specialist",
-						"description": "Московский авиационный институт (национальный исследовательский университет) (2015-2017)"
+						"description": "Московский авиационный институт (национальный исследовательский университет) (2015-2017)",
+						"url": "https://mai.ru/"
 					},
 					{
 						"@type": "EducationalOccupationalCredential",
@@ -172,6 +175,7 @@
 				"validThrough": "2025-12-31T23:59",
 				"hiringOrganization": {
 					"@type": "Organization",
+					"founder": { "@id": "{{page.url}}#person" },
 					"name": "Dvurechensky Pro / Unifier / Lizerium",
 					"sameAs": "https://github.com/Dvurechensky",
 					"contactPoint": {

@@ -1,8 +1,7 @@
 ---
 layout: default
-title: 'Интернет'
+title: 'Животные'
 description: 'Список API по животным на 2025 год'
-keywords: 'dvurechensky_pro, dvurechensky, двуреченский, lizerium, unifier, internet, животные, cats, dogs, birds'
 author: 'Dvurechensky'
 date: 2025-08-19
 published: true

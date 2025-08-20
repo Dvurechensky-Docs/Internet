@@ -8,6 +8,8 @@ published: true
 tags:
   - currency
   - exchange
+  - обмен
+  - валют
 ---
 
 ### Обмен валют ➿

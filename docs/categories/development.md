@@ -7,6 +7,7 @@ date: 2025-08-21
 published: true
 tags:
   - development
+  - разработка
 ---
 
 ### Разработка ⛳

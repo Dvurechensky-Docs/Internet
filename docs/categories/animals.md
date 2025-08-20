@@ -7,23 +7,7 @@ date: 2025-08-19
 published: true
 tags:
   - animals
-  - cats
-  - dogs
-  - birds
-  - foxes
-  - ducks
-  - bears
-  - images
-  - facts
-  - adoption
-  - migration
-  - status
-  - placeholders
-  - random
-  - apiKey
-  - public
-  - wildlife
-  - wildlife-api
+  - животные
 ---
 
 ### Животные 🐺

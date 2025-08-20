@@ -6,20 +6,8 @@ author: 'Dvurechensky'
 date: 2025-08-19
 published: true
 tags:
-  - API
+  - blockchain
   - блокчейн
-  - криптовалюты
-  - смарт-контракты
-  - Ethereum
-  - Binance Smart Chain
-  - GraphQL
-  - RPC
-  - распределенные сети
-  - индексирование данных
-  - Blockchain-as-a-Service
-  - Chainlink
-  - Helium
-  - DEX
 ---
 
 ### Блокчейн ♓

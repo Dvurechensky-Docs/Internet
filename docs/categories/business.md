@@ -7,6 +7,7 @@ date: 2025-08-20
 published: true
 tags:
   - business
+  - бизнес
 ---
 
 ### Бизнес 📭

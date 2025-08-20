@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 'Блокчейн'
+title: 'Блокчейн ♓'
 description: 'Список API по блокчейну на 2025 год'
 author: 'Dvurechensky'
 date: 2025-08-19

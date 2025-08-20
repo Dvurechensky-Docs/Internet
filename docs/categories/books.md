@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 'Книги'
+title: 'Книги 📕'
 description: 'Список API по книгам на 2025 год'
 author: 'Dvurechensky'
 date: 2025-08-20

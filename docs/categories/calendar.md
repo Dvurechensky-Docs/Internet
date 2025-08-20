@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 'Календарь'
+title: 'Календарь 📆'
 description: 'Список API по календарям на 2025 год'
 author: 'Dvurechensky'
 date: 2025-08-20

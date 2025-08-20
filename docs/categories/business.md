@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 'Бизнес'
+title: 'Бизнес 📭'
 description: 'Список API по бизнесу на 2025 год'
 author: 'Dvurechensky'
 date: 2025-08-20

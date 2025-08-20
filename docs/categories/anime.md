@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 'Аниме'
+title: 'Аниме 🔴'
 description: 'Список API аниме на 2025 год'
 author: 'Dvurechensky'
 date: 2025-08-19

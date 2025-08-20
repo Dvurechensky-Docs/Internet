@@ -20,5 +20,7 @@ published: true
 - [Непрерывная интеграция 🎆](categories/continuous-integration.md)
 - [Криптовалюта 🔌](categories/cryptocurrency.md)
 - [Обмен валют ➿](categories/currency-exchange.md)
+- [Проверка данных 🚿](categories/data-check.md)
+- [Разработка ⛳](categories/development.md)
 
 > 2025

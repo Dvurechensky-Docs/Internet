@@ -18,5 +18,7 @@ published: true
 - [Календарь 📆](categories/calendar.md)
 - [Облачное хранилище и обмен файлами ⛅](categories/cloud-storage-and-file-sharing.md)
 - [Непрерывная интеграция 🎆](categories/continuous-integration.md)
+- [Криптовалюта 🔌](categories/cryptocurrency.md)
+- [Обмен валют ➿](categories/currency-exchange.md)
 
 > 2025

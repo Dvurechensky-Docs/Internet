@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 'Животные'
+title: 'Животные 🐺'
 description: 'Список API по животным на 2025 год'
 author: 'Dvurechensky'
 date: 2025-08-19

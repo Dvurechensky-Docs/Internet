@@ -13,5 +13,10 @@ published: true
 - [Искусство и дизайн 🛅](categories/art-and-design.md)
 - [Аутентификация и авторизация 📳](categories/authentication-and-authorization.md)
 - [Блокчейн ♓](categories/blockchain.md)
+- [Книги 📕](categories/books.md)
+- [Бизнес 📭](categories/business.md)
+- [Календарь 📆](categories/calendar.md)
+- [Облачное хранилище и обмен файлами ⛅](categories/cloud-storage-and-file-sharing.md)
+- [Непрерывная интеграция 🎆](categories/continuous-integration.md)
 
 > 2025

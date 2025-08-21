@@ -66,7 +66,7 @@ published: true
 <script src="https://unpkg.com/lunr-languages/lunr.stemmer.support.js"></script>
 <script src="https://unpkg.com/lunr-languages/lunr.ru.js"></script>
 <script src="https://unpkg.com/lunr-languages/lunr.multi.js"></script>
-<script src="https://unpkg.com/marked/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
 <script>
 fetch('{{ "/search.json" | relative_url }}')
   .then(res => res.json())

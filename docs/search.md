@@ -47,17 +47,20 @@ published: true
 </div>
 
 <!-- Подключаем elasticlunr.js -->
-<script src="https://unpkg.com/elasticlunr/elasticlunr.min.js"></script>
+<script src="https://unpkg.com/lunr/lunr.js"></script>
+<script src="https://unpkg.com/lunr-languages/lunr.stemmer.support.js"></script>
+<script src="https://unpkg.com/lunr-languages/lunr.ru.js"></script>
 <script>
 fetch('{{ "/search.json" | relative_url }}')
   .then(res => res.json())
   .then(data => {
-    const idx = elasticlunr(function () {
-      this.addField('title');
-      this.addField('content');
-      this.setRef('url');
-      data.forEach(doc => this.addDoc(doc));
-    });
+    const idx = lunr(function () {
+      this.use(lunr.ru)        // включаем русский
+      this.ref('url')
+      this.field('title')
+      this.field('content')
+      data.forEach(doc => this.add(doc))
+    })
 
     const input = document.querySelector('#search');
     const results = document.querySelector('#results');

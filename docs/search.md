@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 'Поиск'
+title: 'Поиск 🔍'
 date: 2025-08-21
 published: true
 ---
@@ -56,12 +56,12 @@ published: true
 </style>
 
 <div id="search-container">
-  <input type="text" id="search" placeholder="Введите текст для поиска...">
+  <input type="text" id="search" placeholder="Введите текст для поиска 🔍">
   <ul id="results"></ul>
   <a href="index.html">⬆ Вернуться к оглавлению</a>
 </div>
 
-<!-- Подключаем elasticlunr.js -->
+<!-- Подключаем elasticlunr.js -->ф
 <script src="https://unpkg.com/lunr/lunr.js"></script>
 <script src="https://unpkg.com/lunr-languages/lunr.stemmer.support.js"></script>
 <script src="https://unpkg.com/lunr-languages/lunr.ru.js"></script>
@@ -82,23 +82,34 @@ fetch('{{ "/search.json" | relative_url }}')
     const results = document.querySelector('#results');
 
     input.addEventListener('input', function() {
-      const query = this.value.trim();
+      const query = this.value.trim().toLowerCase();
       results.innerHTML = '';
       if (query.length < 2) return;
 
       const searchResults = idx.search(query, {expand: true});
-
-      // создаём блоки для каждого совпадения
+      
+      // Группируем по url
+      const grouped = {};
       searchResults.forEach(r => {
-        const doc = data.find(d => d.url === r.ref && d.content.toLowerCase().includes(query.toLowerCase()));
+        const doc = data.find(d => d.url === r.ref && d.content.toLowerCase().includes(query));
         if (!doc) return;
-
-        const block = document.createElement('div');
-        block.className = 'search-result';
-        block.innerHTML = `<a href="${doc.url}">${doc.title}</a>
-                           <p>${doc.content}</p>`;
-        results.appendChild(block);
+        if (!grouped[doc.url]) grouped[doc.url] = {title: doc.title, rows: []};
+        grouped[doc.url].rows.push(doc.content);
       });
+
+      for (const url in grouped) {
+        const catBlock = document.createElement('div');
+        catBlock.className = 'search-result';
+        catBlock.innerHTML = `<a href="${url}">${grouped[url].title}</a>`;
+        const ul = document.createElement('ul');
+        grouped[url].rows.forEach(row => {
+          const li = document.createElement('li');
+          li.textContent = row;
+          ul.appendChild(li);
+        });
+        catBlock.appendChild(ul);
+        results.appendChild(catBlock);
+      }
     });
   });
 </script>

@@ -66,6 +66,7 @@ published: true
 <script src="https://unpkg.com/lunr-languages/lunr.stemmer.support.js"></script>
 <script src="https://unpkg.com/lunr-languages/lunr.ru.js"></script>
 <script src="https://unpkg.com/lunr-languages/lunr.multi.js"></script>
+<script src="https://unpkg.com/marked/marked.min.js"></script>
 <script>
 fetch('{{ "/search.json" | relative_url }}')
   .then(res => res.json())
@@ -88,13 +89,21 @@ fetch('{{ "/search.json" | relative_url }}')
 
       const searchResults = idx.search(query, {expand: true});
       
-      // Группируем по url
+      // группируем по url
       const grouped = {};
       searchResults.forEach(r => {
-        const doc = data.find(d => d.url === r.ref && d.content.toLowerCase().includes(query));
+        const doc = data.find(d => d.url === r.ref);
         if (!doc) return;
+
+        // делим контент на строки
+        const lines = doc.content.split(/\r?\n/);
+
+        // ищем только те строки, где встречается query
+        const matches = lines.filter(line => line.toLowerCase().includes(query));
+        if (matches.length === 0) return;
+
         if (!grouped[doc.url]) grouped[doc.url] = {title: doc.title, rows: []};
-        grouped[doc.url].rows.push(doc.content);
+        grouped[doc.url].rows.push(...matches);
       });
 
       for (const url in grouped) {
@@ -104,7 +113,8 @@ fetch('{{ "/search.json" | relative_url }}')
         const ul = document.createElement('ul');
         grouped[url].rows.forEach(row => {
           const li = document.createElement('li');
-          li.textContent = row;
+          // превращаем Markdown (таблицы, ссылки и т.п.) в HTML
+          li.innerHTML = marked.parseInline(row);
           ul.appendChild(li);
         });
         catBlock.appendChild(ul);

@@ -49,13 +49,6 @@ published: true
   background: #262626;
 }
 
-.search-result a {
-  text-decoration: none;
-  color: #333;
-  font-weight: bold;
-  font-size: 16px;
-}
-
 .search-result p {
   margin: 5px 0 0 0;
   font-size: 14px;
@@ -78,10 +71,6 @@ published: true
   border-radius: 10px;
   padding: 5px;
   margin: 11px 5px;
-}
-
-.search-result:hover {
-  background: #e0e0e0;
 }
 </style>
 

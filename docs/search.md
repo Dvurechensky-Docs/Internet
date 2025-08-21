@@ -1,22 +1,62 @@
 ---
 layout: default
 title: 'Поиск'
+date: 2025-08-21
+published: true
 ---
 
-<h1>Поиск по сайту</h1>
-<input type="text" id="search" placeholder="Введите текст для поиска...">
-<ul id="results"></ul>
+<style>
+/* Стили для поиска */
+#search-container {
+  max-width: 700px;
+  margin: 40px auto;
+  font-family: Arial, sans-serif;
+}
+#search {
+  width: 100%;
+  padding: 10px 15px;
+  font-size: 16px;
+  border: 2px solid #333;
+  border-radius: 6px;
+  margin-bottom: 15px;
+}
+#results {
+  list-style: none;
+  padding: 0;
+}
+#results li {
+  background: #f3f3f3;
+  margin-bottom: 8px;
+  padding: 10px;
+  border-radius: 5px;
+  transition: background 0.2s;
+}
+#results li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+#results li:hover {
+  background: #e0e0e0;
+}
+</style>
 
-<script src="https://unpkg.com/lunr/lunr.js"></script>
+<div id="search-container">
+  <input type="text" id="search" placeholder="Введите текст для поиска...">
+  <ul id="results"></ul>
+</div>
+
+<!-- Подключаем elasticlunr.js -->
+<script src="https://unpkg.com/elasticlunr/elasticlunr.min.js"></script>
 <script>
 fetch('{{ "/search.json" | relative_url }}')
   .then(res => res.json())
   .then(data => {
-    const idx = lunr(function () {
-      this.ref('url')
-      this.field('title')
-      this.field('content')
-      data.forEach(doc => this.add(doc))
+    const idx = elasticlunr(function () {
+      this.addField('title');
+      this.addField('content');
+      this.setRef('url');
+      data.forEach(doc => this.addDoc(doc));
     });
 
     const input = document.querySelector('#search');
@@ -26,7 +66,7 @@ fetch('{{ "/search.json" | relative_url }}')
       const query = this.value.trim();
       results.innerHTML = '';
       if (query.length < 2) return; // поиск только с 2+ символов
-      const searchResults = idx.search(query);
+      const searchResults = idx.search(query, {expand: true});
       results.innerHTML = searchResults.map(r => {
         const doc = data.find(d => d.url === r.ref);
         return `<li><a href="${doc.url}">${doc.title}</a></li>`;

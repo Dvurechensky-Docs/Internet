@@ -37,6 +37,14 @@ published: true
 }
 
 .search-result a {
+  color: #0066cc;
+}
+
+.search-result:hover {
+  background: #f0f8ff;
+}
+
+.search-result a {
   text-decoration: none;
   color: #333;
   font-weight: bold;
@@ -47,6 +55,23 @@ published: true
   margin: 5px 0 0 0;
   font-size: 14px;
   color: #555;
+}
+
+.search-ul-st{
+  color: #f9f9f9;
+  margin: 0 10px;
+  padding: 0px 0px 0px 20px;
+  background: #242424;
+  border-radius: 10px;
+  border: 2px solid #6da312;
+}
+
+.search-li-st{
+  color: #f9f9f9;
+  background: #3e3e3e;
+  border: 1px solid #545454;
+  border-radius: 10px;
+  padding: 5px;
 }
 
 .search-result:hover {
@@ -111,10 +136,12 @@ fetch('{{ "/search.json" | relative_url }}')
         catBlock.className = 'search-result';
         catBlock.innerHTML = `<a href="${url}">${grouped[url].title}</a>`;
         const ul = document.createElement('ul');
+        ul.classList.add("search-ul-st");
         grouped[url].rows.forEach(row => {
           const li = document.createElement('li');
           // превращаем Markdown (таблицы, ссылки и т.п.) в HTML
           li.innerHTML = marked.parseInline(row);
+          li.classList.add("search-li-st");
           ul.appendChild(li);
         });
         catBlock.appendChild(ul);

@@ -2,7 +2,7 @@
 layout: null
 ---
 [
-{% assign pages_to_index = site.pages | concat: site.collections.categories.docs %}
+{% assign pages_to_index = site.pages | where_exp:"page","page.path contains 'categories/'" %}
 {% for page in pages_to_index %}
   {
     "title": "{{ page.title | escape }}",

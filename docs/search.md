@@ -44,18 +44,20 @@ published: true
 <div id="search-container">
   <input type="text" id="search" placeholder="Введите текст для поиска...">
   <ul id="results"></ul>
+  <a href="index.html">⬆ Вернуться к оглавлению</a>
 </div>
 
 <!-- Подключаем elasticlunr.js -->
 <script src="https://unpkg.com/lunr/lunr.js"></script>
 <script src="https://unpkg.com/lunr-languages/lunr.stemmer.support.js"></script>
 <script src="https://unpkg.com/lunr-languages/lunr.ru.js"></script>
+<script src="https://unpkg.com/lunr-languages/lunr.multi.js"></script>
 <script>
 fetch('{{ "/search.json" | relative_url }}')
   .then(res => res.json())
   .then(data => {
     const idx = lunr(function () {
-      this.use(lunr.ru)        // включаем русский
+      this.use(lunr.multiLanguage('ru', 'en'))  // русский + английский
       this.ref('url')
       this.field('title')
       this.field('content')

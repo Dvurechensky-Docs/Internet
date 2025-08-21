@@ -44,7 +44,7 @@ published: true
 <div id="search-container">
   <input type="text" id="search" placeholder="Введите текст для поиска...">
   <ul id="results"></ul>
-  <a href="/">⬆ Вернуться к оглавлению</a>
+  <a href="/index.html">⬆ Вернуться к оглавлению</a>
 </div>
 
 <!-- Подключаем elasticlunr.js -->
@@ -57,7 +57,7 @@ fetch('{{ "/search.json" | relative_url }}')
   .then(res => res.json())
   .then(data => {
     const idx = lunr(function () {
-      this.use(lunr.multiLanguage('ru', 'en'))  // русский + английский
+      this.use(lunr.multiLanguage('ru','en'))  // русский + английский
       this.ref('url')
       this.field('title')
       this.field('content')
@@ -70,7 +70,7 @@ fetch('{{ "/search.json" | relative_url }}')
     input.addEventListener('input', function() {
       const query = this.value.trim();
       results.innerHTML = '';
-      if (query.length < 2) return; // поиск только с 2+ символов
+      if (query.length < 2) return;
       const searchResults = idx.search(query, {expand: true});
       results.innerHTML = searchResults.map(r => {
         const doc = data.find(d => d.url === r.ref);

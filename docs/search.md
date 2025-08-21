@@ -44,7 +44,7 @@ published: true
 <div id="search-container">
   <input type="text" id="search" placeholder="Введите текст для поиска...">
   <ul id="results"></ul>
-  <a href="index.html">⬆ Вернуться к оглавлению</a>
+  <a href="/">⬆ Вернуться к оглавлению</a>
 </div>
 
 <!-- Подключаем elasticlunr.js -->

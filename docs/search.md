@@ -30,18 +30,23 @@ published: true
 .search-result {
   border: 1px solid #ccc;
   border-radius: 6px;
-  padding: 10px 15px;
+  padding: 15px 15px;
   margin-bottom: 10px;
-  background: #f9f9f9;
+  background: #161616;
+  color: #b9b09e;
   transition: background 0.2s;
 }
 
 .search-result a {
-  color: #0066cc;
+  text-decoration: none;
+  color: #ebcc10;
+  font-weight: bold;
+  font-size: 18px;
+  padding: 16px;
 }
 
 .search-result:hover {
-  background: #f0f8ff;
+  background: #262626;
 }
 
 .search-result a {
@@ -72,12 +77,12 @@ published: true
   border: 1px solid #545454;
   border-radius: 10px;
   padding: 5px;
+  margin: 11px 5px;
 }
 
 .search-result:hover {
   background: #e0e0e0;
 }
-
 </style>
 
 <div id="search-container">

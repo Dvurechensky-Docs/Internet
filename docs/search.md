@@ -7,6 +7,21 @@ published: true
 
 <style>
 /* Стили для поиска */
+#search-container {
+  max-width: 700px;
+  margin: 40px auto;
+  font-family: Arial, sans-serif;
+}
+#search {
+  width: 100%;
+  padding: 10px 15px;
+  font-size: 16px;
+  border: 2px solid #333;
+  border-radius: 6px;
+  margin-bottom: 15px;
+}
+
+/* Стили для поиска */
 #results {
   list-style: none;
   padding: 0;

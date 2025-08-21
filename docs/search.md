@@ -95,10 +95,10 @@ fetch('{{ "/search.json" | relative_url }}')
         const doc = data.find(d => d.url === r.ref);
         if (!doc) return;
 
-        // делим контент на строки
-        const lines = doc.content.split(/\r?\n/);
+        // режем на строки
+        const lines = doc.content.split(/[\r\n]+/);
 
-        // ищем только те строки, где встречается query
+        // ищем совпадения
         const matches = lines.filter(line => line.toLowerCase().includes(query));
         if (matches.length === 0) return;
 

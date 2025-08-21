@@ -61,7 +61,7 @@ published: true
   <a href="index.html">⬆ Вернуться к оглавлению</a>
 </div>
 
-<!-- Подключаем elasticlunr.js -->ф
+<!-- Подключаем elasticlunr.js -->
 <script src="https://unpkg.com/lunr/lunr.js"></script>
 <script src="https://unpkg.com/lunr-languages/lunr.stemmer.support.js"></script>
 <script src="https://unpkg.com/lunr-languages/lunr.ru.js"></script>
